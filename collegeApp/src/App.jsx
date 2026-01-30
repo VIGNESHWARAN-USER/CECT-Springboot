@@ -32,7 +32,6 @@ import Error404 from "./assets/Error404";
 import RejectedStud from "./assets/RejectedStud";
 import ApprovedStudDrop from "./assets/ApprovedStudDrop";
 import RejectedStudDrop from "./assets/RejectedStudDrop";
-import Upload from "./assets/upload";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -72,7 +71,6 @@ function App() {
           role === "ca" ? <Home1 year={year} sec={sec} dept={dept}/> :
           role === "hod" ? <Home2 /> :
           role === 'dir' ? <Home3/>:
-          role === 'OA'? <Upload user={user}/>:
           <CourseManagementPage/>
         } />
         <Route path="/approval" element={
@@ -101,7 +99,6 @@ function App() {
         <Route path="/ApprovedStuddrop" element={<ApprovedStudDrop/>}/>
         <Route path="/RejectedStud" element={<RejectedStud/>}/>
         <Route path="/RejectedStuddrop" element={<RejectedStudDrop/>}/>
-        <Route path="/upload" element={<Upload/>}/>
 
         <Route path="*" element={<Error404/>}/>
       </Routes>
